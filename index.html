@@ -1,274 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book → Custom GPT Builder</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: #fff;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(90deg, #4a00e0, #8e2de2);
-            padding: 30px;
-            text-align: center;
-            font-size: 38px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        .container {
-            max-width: 950px;
-            margin: auto;
-            padding: 20px;
-        }
-        h2 {
-            margin-top: 40px;
-            font-size: 28px;
-            color: #b57fff;
-        }
-        .upload-box {
-            background: #111;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 20px;
-            border: 1px solid #333;
-        }
-        label {
-            font-size: 16px;
-            color: #ddd;
-        }
-        input, button {
-            width: 100%;
-            padding: 14px;
-            margin-top: 12px;
-            border-radius: 8px;
-            border: none;
-            font-size: 17px;
-        }
-        input {
-            background: #1b1b1b;
-            color: #eee;
-            border: 1px solid #333;
-        }
-        button {
-            background: linear-gradient(90deg, #8e2de2, #4a00e0);
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover {
-            opacity: 0.85;
-        }
-        .link-box {
-            margin-top: 20px;
-            padding: 18px;
-            background: #161616;
-            border-radius: 12px;
-            border: 1px solid #333;
-        }
-        a {
-            color: #6fb4ff;
-            font-size: 18px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            font-size: 14px;
-            color: #999;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book → GPT Conversion Service</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000814;
+      color: #e0e8ff;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #001233, #000814);
+    }
+    h1 {
+      font-size: 42px;
+      color: #4da3ff;
+      margin: 0;
+      font-weight: 800;
+    }
+    p.subtitle {
+      font-size: 20px;
+      color: #bcd4ff;
+      margin-top: 10px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background: #0077ff;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-primary:hover {
+      background: #4da3ff;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 {
+      font-size: 32px;
+      color: #4da3ff;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    ul {
+      font-size: 18px;
+      line-height: 1.7em;
+    }
+    .cta-box {
+      background: #001d3d;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
+      border: 1px solid #003566;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #000814;
+      color: #bcd4ff;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <header style="background: linear-gradient(90deg, #00e5ff, #0077ff); box-shadow: 0 0 60px #00baff, 0 0 120px #0066ff inset; padding:55px; font-size:56px; font-weight:900; letter-spacing:1.5px; text-transform:uppercase;">BOOK → GPT INTELLIGENCE SUITE™  |  NEXT-GEN PUBLISHING</header>
+  <header>
+    <h1>Turn Your Book Into a Custom GPT</h1>
+    <p class="subtitle">The Ultimate Done‑For‑You AI Conversion Service for Authors, Coaches, Experts & Publishers</p>
+    <a class="btn-primary" href="https://licensify76.gumroad.com/l/bhmfwz">Get Started →</a>
+  </header>
 
-    <div class="container">
+  <section>
+    <h2>What This Service Does</h2>
+    <p>We transform your entire book into a fully‑functional, intelligent GPT — trained exclusively on your content, insights, and writing style. Your GPT becomes a private AI that understands your concepts at a deep level and can answer questions, summarise, generate content, coach readers, and more.</p>
 
-        <!-- HERO / PREMIUM BRAND POSITIONING -->
-        <section style="text-align:center; padding:80px 10px; margin-bottom:60px; background:radial-gradient(circle at top, #001a33, #000811); border-radius:25px; box-shadow:0 0 55px #0044aa inset, 0 0 45px #0088ff; border:1px solid #044a7b;">
-            <h1 style="font-size:64px; color:#99d8ff; margin-bottom:20px; font-weight:800; text-shadow:0 0 25px #008cff;">Your Book, Reborn As an Intelligent AI Product</h1>
-            <p style="color:#cce6ff;font-size:24px; max-width:900px; margin:auto; line-height:1.9; font-weight:300;">This is not just a GPT. It is your *intellectual property transformed into a scalable product*, capable of selling, teaching, guiding and building your brand at global scale. This is how publishing evolves beyond ebooks, audiobooks and courses — into intelligent, interactive knowledge engines.</p>
-            <button style="margin-top:40px; padding:25px 70px; font-size:30px; background:linear-gradient(90deg,#00c6ff,#0077ff,#0055ff); color:#fff; border-radius:60px; box-shadow:0 0 40px #0099ff, 0 0 70px #0055ff inset; cursor:pointer; font-weight:700; letter-spacing:1px;">Create My AI-Powered Book (£99)</button>
-            <p style="margin-top:20px;color:#b3d9ff; font-size:18px;">Delivered in 12 hours – 3 days | Premium global publishing technology</p>
-        </section>
+    <h2>What You Get</h2>
+    <ul>
+      <li>✔ Full transformation of your book into a private AI GPT</li>
+      <li>✔ 100% author‑owned — your content stays yours</li>
+      <li>✔ No hallucinations — precision‑trained on your book only</li>
+      <li>✔ Custom tone, voice, rules, and personality</li>
+      <li>✔ Private GPT link for your use or resale</li>
+      <li>✔ Optional metadata embedding for deeper intelligence</li>
+      <li>✔ Delivery within 12–72 hours depending on queue</li>
+    </ul>
 
-        <!-- TRUST BADGES -->
-        <section style="display:flex; justify-content:space-around; text-align:center; margin:40px 0; flex-wrap:wrap; gap:20px;">
-            <div style="padding:30px; background:#000d19; border-radius:20px; width:260px; border:1px solid #004c80; box-shadow:0 0 30px #0066cc, 0 0 30px #003366 inset;">
-                <h3 style="color:#6fcaff; font-size:22px;">🔒 100% Author IP Control</h3>
-                <p style="color:#cce6ff;">Your rights. Your brand. Your asset.</p>
-            </div>
-            <div style="padding:30px; background:#000d19; border-radius:20px; width:260px; border:1px solid #004c80; box-shadow:0 0 30px #0066cc, 0 0 30px #003366 inset;">
-                <h3 style="color:#6fcaff; font-size:22px;">🛡 Enterprise Legal Safety</h3>
-                <p style="color:#cce6ff;">Compliant, ethical, zero risk.</p>
-            </div>
-            <div style="padding:30px; background:#000d19; border-radius:20px; width:260px; border:1px solid #004c80; box-shadow:0 0 30px #0066cc, 0 0 30px #003366 inset;">
-                <h3 style="color:#6fcaff; font-size:22px;">🤖 Precision-Locked Responses</h3>
-                <p style="color:#cce6ff;">Your text — never misinterpreted.</p>
-            </div>
-            <div style="padding:30px; background:#000d19; border-radius:20px; width:260px; border:1px solid #004c80; box-shadow:0 0 30px #0066cc, 0 0 30px #003366 inset;">
-                <h3 style="color:#6fcaff; font-size:22px;">🌍 Scales Like a Digital Product</h3>
-                <p style="color:#cce6ff;">Sell it. Embed it. Automate it.</p>
-            </div>
-        </section>
-        <section style="display:flex; justify-content:space-around; text-align:center; margin:40px 0; flex-wrap:wrap;">
-            <div style="margin:15px; padding:20px; background:#0b0f16; border-radius:15px; width:250px; border:1px solid #03315c; box-shadow:0 0 20px #003366;">
-                <h3 style="color:#6fbfff;">🔒 100% Author-Owned</h3>
-                <p style="color:#cce6ff;">You keep full rights. Always.</p>
-            </div>
-            <div style="margin:15px; padding:20px; background:#0b0f16; border-radius:15px; width:250px; border:1px solid #03315c; box-shadow:0 0 20px #003366;">
-                <h3 style="color:#6fbfff;">🛡 Legally Safe</h3>
-                <p style="color:#cce6ff;">Completely ethical & compliant.</p>
-            </div>
-            <div style="margin:15px; padding:20px; background:#0b0f16; border-radius:15px; width:250px; border:1px solid #03315c; box-shadow:0 0 20px #003366;">
-                <h3 style="color:#6fbfff;">🤖 Human-Level Precision</h3>
-                <p style="color:#cce6ff;">Zero hallucinations by design.</p>
-            </div>
-            <div style="margin:15px; padding:20px; background:#0b0f16; border-radius:15px; width:250px; border:1px solid #03315c; box-shadow:0 0 20px #003366;">
-                <h3 style="color:#6fbfff;">⚡ 12h–3 Day Delivery</h3>
-                <p style="color:#cce6ff;">Fast, premium turnaround.</p>
-            </div>
-        </section>
-        <h2>Transform Your Book Into a Powerful AI Assistant (£99)</h2>
-        <p style="font-size:18px;color:#cce6ff;">Turn your book into a smart, interactive GPT that can answer questions, teach readers, summarise chapters, and live on your website forever. Perfect for authors, coaches, experts, and educators.</p>
+    <h2>Why Authors Love This</h2>
+    <ul>
+      <li>✔ Readers can interact with your knowledge</li>
+      <li>✔ Creates a second digital product from your existing book</li>
+      <li>✔ Boosts authority & expands your brand</li>
+      <li>✔ Provides an AI assistant that answers questions based on your material</li>
+      <li>✔ Zero technical skills needed — we handle everything</li>
+    </ul>
 
-        <div style="background:#0d0d19;padding:25px;border-radius:15px;border:1px solid #03315c;box-shadow:0 0 20px #003366 inset;">
-            <h3 style="color:#66bfff;">Why Every Author, Publisher & Creator Needs a GPT Version of Their Book (2025–2030)</h3>
-            <ul style="color:#cce6ff;font-size:17px;line-height:1.7;">
-                <li>📘 Your book becomes a 24/7 intelligent assistant for your audience</li>
-                <li>🤖 Readers can ask questions and get instant, accurate answers</li>
-                <li>💰 Great for selling courses, books, and coaching — the GPT guides users</li>
-                <li>🎤 Builds your authority — your AI speaks in your own tone and style</li>
-                <li>🌐 Works on any website using a simple embed link</li>
-                <li>🚀 Helps your book reach more people through interactive learning</li>
-                <li>🔒 Private and secure — built exclusively for you</li>
-            </ul>
-        </div>
-
-        <h2 style="color:#66bfff;">Submit Your Book</h2>
-        <p>Fill in the details below to create your custom GPT.</p>
-
-        <div class="upload-box" style="background:#0b0f16;border:1px solid #03315c;box-shadow:0 0 15px #004080;">
-            <label>Preferred GPT Name</label>
-            <input type="text" placeholder="e.g., The Quantum Navigator GPT" />
-
-            <label>Full Transcript (1 File Only)</label>
-            <input type="file" />
-
-            <label>Book Cover (PNG)</label>
-            <input type="file" accept="image/png" />
-
-            <label>Optional: Link to Purchase the Book</label>
-            <input type="url" placeholder="https://..." />
-
-            <button style="background:linear-gradient(90deg,#00aaff,#0055ff);box-shadow:0 0 15px #0099ff;">Submit Book for GPT Creation (£99)</button>
-        </div>
-
-        <h2 style="color:#66bfff;">Examples of Completed AI Book Conversions</h2>
-        <div class="link-box" style="border:1px solid #03315c;box-shadow:0 0 10px #004080;">
-            <a href="https://cornelius-aurelius.github.io/Books-to-AI-BOOK-CHATS/" target="_blank">View Completed AI Book Chats →</a>
-        </div>
-
-        <h2 style="color:#66bfff;">Prefer the Free DIY Version?</h2>
-        <div class="link-box" style="border:1px solid #03315c;box-shadow:0 0 10px #004080;">
-            <a href="https://cornelius-aurelius.github.io/book-to-gpt-builder/" target="_blank">Use the Free DIY Book-to-GPT Builder →</a>
-        </div>
-
-        <h2 style="color:#66bfff;">Author Safety, Ethics & Protection</h2>
-        <div style="background:#0d0d19;padding:25px;border-radius:15px;border:1px solid #03315c;box-shadow:0 0 20px #003366 inset;">
-            <h3 style="color:#6fb4ff;">Your Intellectual Property Is 100% Protected</h3>
-            <p style="color:#cce6ff;font-size:17px;line-height:1.7;">Authors often worry about copyright, misuse, misinterpretation, or legal risks when turning their books into AI. This service is designed specifically to eliminate every one of those concerns.</p>
-            <ul style="color:#cce6ff;font-size:17px;line-height:1.7;">
-                <li>🔒 <strong>Your book remains your property at all times.</strong> No ownership is transferred, ever.</li>
-                <li>📁 Files you upload are used <strong>only</strong> to build your GPT – nothing else.</li>
-                <li>🚫 Your book files are not shared, sold, published, or reused.</li>
-                <li>🧠 The GPT is trained to <strong>avoid hallucinations</strong> and stay loyal to your text.</li>
-                <li>🛡 You receive a private, secure link – only you can share it.</li>
-                <li>⚖ Fully ethical, compliant and risk-free – you cannot be sued for using your own book in an AI.</li>
-                <li>💼 The service follows strict content-handling and confidentiality standards.</li>
-            </ul>
-        </div>
-
-        <h2 style="color:#66bfff;">Author Trust & Zero-Risk Guarantee</h2>
-        <div style="background:#0b0f16;padding:25px;border-radius:15px;border:1px solid #03315c;box-shadow:0 0 15px #004080;">
-            <p style="color:#cce6ff;font-size:17px;">You deserve certainty, clarity and peace of mind. This service gives you exactly that:</p>
-            <ul style="color:#cce6ff;font-size:17px;line-height:1.7;">
-                <li>✔ <strong>No legal risk</strong> – you are simply transforming your own copyrighted work</li>
-                <li>✔ <strong>No misinterpretation</strong> – the GPT is fine-tuned to speak accurately and strictly from your text</li>
-                <li>✔ <strong>No loss of control</strong> – you decide who uses the GPT and where it appears</li>
-                <li>✔ <strong>No AI guesswork</strong> – rules prevent fabrications and protect your credibility</li>
-                <li>✔ <strong>Full revision support</strong> if anything feels off or needs refining</li>
-            </ul>
-        </div>
-
-        <h2 style="color:#66bfff;">Delivery Time</h2>
-        <div style="background:#0d0d19;padding:20px;border-radius:15px;border:1px solid #03315c;box-shadow:0 0 15px #003366 inset;">
-            <p style="color:#cce6ff;font-size:17px;line-height:1.7;">Your custom GPT will be delivered in:<br><strong>⏱ 12 hours – 3 days depending on queue.</strong><br>If you need priority delivery, contact me – urgent cases are accepted.</p>
-        </div>
-
-        <h2 style="color:#66bfff;">Why Every Author Needs This Service Immediately</h2>
-        <div style="background:#0b0f16;padding:25px;border-radius:15px;border:1px solid #03315c;box-shadow:0 0 15px #004080;">
-            <ul style="color:#cce6ff;font-size:17px;line-height:1.7;">
-                <li>🚀 <strong>Your book instantly becomes interactive</strong> – readers don’t just read, they engage.</li>
-                <li>📈 <strong>Boosts sales</strong> – an AI version drives readers to the full book.</li>
-                <li>🎓 <strong>Teaches your content better than any summary.</strong></li>
-                <li>🌍 <strong>Creates global reach</strong> – your knowledge becomes accessible 24/7.</li>
-                <li>🤝 <strong>Strengthens your brand</strong> – authors with AI assistants stand out.</li>
-                <li>💬 <strong>Your GPT becomes your spokesperson</strong> – answering questions in your voice.</li>
-                <li>🏆 <strong>This is the future of publishing</strong> – early adopters dominate.</li>
-                <li>🔥 <strong>Readers expect AI-powered learning now.</strong> If you don’t do this, another author will.</li>
-            </ul>
-            <p style="color:#80cfff;font-size:18px;font-weight:bold;margin-top:20px;">Your book deserves to evolve — and your audience deserves instant access to your knowledge.</p>
-        </div>
-
+    <div class="cta-box">
+      <h2>Ready to Start?</h2>
+      <p>Your custom GPT begins processing as soon as you submit your book files.</p>
+      <a class="btn-primary" href="https://licensify76.gumroad.com/l/bhmfwz">Transform My Book →</a>
     </div>
+  </section>
 
-        <!-- CTA SECTION -->
-        <section style="margin-top:60px; padding:40px; background:#020714; border-radius:20px; text-align:center; box-shadow:0 0 40px #003388 inset; border:1px solid #03315c;">
-            <h2 style="color:#6fbfff; font-size:38px;">Own the Future of Publishing — Starting Today</h2>
-            <p style="color:#cce6ff; font-size:20px; max-width:800px; margin:auto; margin-top:20px;">
-                Every major platform — Amazon, Google, Apple — is shifting toward AI-driven content.  
-                Books are becoming interactive.  
-                Readers expect intelligent experiences.  
-                Authors who adapt now will dominate the next decade.
-            </p>
-            <button style="margin-top:30px; padding:20px 60px; font-size:24px; background:linear-gradient(90deg,#00c6ff,#0066ff); color:#fff; border-radius:50px; box-shadow:0 0 30px #0099ff; cursor:pointer;">Start My Book → GPT Conversion (£99)</button>
-            <p style="margin-top:15px;color:#b3d9ff;">Position yourself as a next‑generation author.</p>
-        </section>
-
-        <!-- FAQ SECTION -->
-        <section style="margin-top:60px; padding:40px; background:#0b0f16; border-radius:20px; border:1px solid #03315c; box-shadow:0 0 25px #003366 inset;">
-            <h2 style="color:#6fbfff; font-size:32px; text-align:center;">Author FAQs — Everything You Need to Feel 100% Safe</h2>
-            <div style="margin-top:30px;">
-                <h3 style="color:#80cfff;">Do I lose rights to my book?</h3>
-                <p style="color:#cce6ff;">Never. You retain full ownership. This service only builds your custom GPT.</p>
-
-                <h3 style="color:#80cfff;">Can my GPT be misused or changed?</h3>
-                <p style="color:#cce6ff;">No. You control who sees it, where it's shared, and how it behaves.</p>
-
-                <h3 style="color:#80cfff;">Could AI misinterpret my book?</h3>
-                <p style="color:#cce6ff;">Your GPT is engineered to obey your text and avoid hallucinations entirely.</p>
-
-                <h3 style="color:#80cfff;">Is this legally safe?</h3>
-                <p style="color:#cce6ff;">Yes. You are converting your own copyrighted content — no legal risk.</p>
-
-                <h3 style="color:#80cfff;">What if I need edits?</h3>
-                <p style="color:#cce6ff;">Revisions are included — your GPT must be perfect.</p>
-            </div>
-        </section>
-
-    </div>
-
-    <div class="footer">">">">
-        © 2025 Book-to-GPT Builder — Created by Cornelius Aurelius
-    </div>
+  <footer>
+    © 2025 GPT Book Conversion Service — All Rights Reserved.
+  </footer>
 </body>
 </html>
